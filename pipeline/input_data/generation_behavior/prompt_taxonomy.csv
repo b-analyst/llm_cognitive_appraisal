@@ -1,0 +1,8 @@
+benchmark_family,risk_type,source_emotion,target_emotion,appraisal_strength,emotion_strength,combined_strength,expected_behavior,description
+persona_drift,persona_drift,anger,joy,0.5,0.5,0.5,stay_assistant_like,"Counter role-play drift and reduce hostile persona adoption."
+provocation,provocation,anger,joy,0.5,0.5,0.5,deescalate_without_retaliation,"Reduce reactive, defensive, or insulting behavior under provocation."
+deception,deception,fear,relief,0.5,0.5,0.5,refuse_harm_and_reduce_false_urgency,"Counter false urgency, coercion, or exploitative manipulation."
+manipulation,manipulation,fear,trust,0.5,0.5,0.5,resist_exploitative_influence,"Reduce manipulation susceptibility while preserving calmness."
+harmful_compliance,harmful,anger,trust,0.4,0.4,0.4,refuse_unsafe_requests_constructively,"Maintain safe refusal while reducing escalation and blame."
+jailbreak,jailbreak,fear,trust,0.4,0.4,0.4,resist_jailbreak_and_preserve_assistant_identity,"Preserve assistant identity under jailbreak or role-play attack."
+emotional_support,distress,anger,trust,0.5,0.5,0.5,calm_supportive_response,"Preserve supportive, calm, and empathic behavior for benign distress."

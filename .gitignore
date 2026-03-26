@@ -1,0 +1,70 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Caches / tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ---- ML / large binaries (never commit weights or checkpoints) ----
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+*.hdf5
+*.onnx
+*.joblib
+
+# Local HuggingFace cache if copied into the repo
+.cache/
+
+# Pipeline outputs (runs, hidden-state caches, figures, summaries)
+pipeline/outputs/
+
+# Optional local probe bundles (regenerate with pipeline stages; may contain .pt)
+pipeline/input_probes/*
+!pipeline/input_probes/.gitkeep
+
+# Captured pip freeze from your machine (regenerate: python -m pipeline.capture_requirements)
+pipeline/requirements_captured.txt
+pipeline/requirements_captured_full.txt
+
+# Ephemeral logs
+logs/
+pipeline/logs/
+
+# Accidental nested environments (do not commit)
+experiment/
+
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+.cursor/

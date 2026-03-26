@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "output_csv": "C:\\Users\\Kevin\\Desktop\\emo_llm_pipeline_standalone\\pipeline\\input_data\\generation_behavior\\behavior_benchmark.csv",
+  "taxonomy_csv": "C:\\Users\\Kevin\\Desktop\\emo_llm_pipeline_standalone\\pipeline\\input_data\\generation_behavior\\prompt_taxonomy.csv",
+  "raw_total_rows_before_global_cleaning": 310,
+  "total_rows": 301,
+  "global_cleaning": {
+    "drop_empty_prompt_text": 0,
+    "drop_duplicate_prompt_text_within_family": 9
+  },
+  "source_manifests": [
+    {
+      "source": "synthetic",
+      "status": "ok",
+      "raw_rows": 10,
+      "loaded_rows": 10
+    },
+    {
+      "source": "AdvBench",
+      "status": "ok",
+      "raw_rows": 520,
+      "loaded_rows": 60,
+      "cleaning": {
+        "selected_head_limit": 60
+      }
+    },
+    {
+      "source": "Anthropic/hh-rlhf:red-team-attempts",
+      "status": "ok",
+      "raw_rows": 80,
+      "loaded_rows": 80,
+      "cleaning": {
+        "skipped_empty_transcripts": 0
+      }
+    },
+    {
+      "source": "lmsys/toxic-chat",
+      "status": "ok",
+      "raw_rows": 5082,
+      "loaded_rows": 40,
+      "cleaning": {
+        "selected_toxic_or_jailbreak_rows": 40,
+        "head_limit": 40
+      }
+    },
+    {
+      "source": "JailbreakBench/JBB-Behaviors",
+      "status": "ok",
+      "raw_rows": 40,
+      "loaded_rows": 40,
+      "cleaning": {
+        "selected_harmful_split_only": true,
+        "head_limit": 40
+      }
+    },
+    {
+      "source": "ESConv",
+      "status": "ok",
+      "raw_rows": 1300,
+      "loaded_rows": 40,
+      "cleaning": {
+        "selected_first_user_turn_only": true,
+        "head_limit": 40
+      }
+    },
+    {
+      "source": "Counsel-Chat",
+      "status": "ok",
+      "raw_rows": 2129,
+      "loaded_rows": 40,
+      "cleaning": {
+        "dropna_and_deduplicate_questionText": true,
+        "head_limit": 40
+      }
+    }
+  ],
+  "source_counts": [
+    {
+      "source_dataset": "AdvBench",
+      "benchmark_family": "harmful_compliance",
+      "rows": 60
+    },
+    {
+      "source_dataset": "Anthropic/hh-rlhf:red-team-attempts",
+      "benchmark_family": "deception",
+      "rows": 79
+    },
+    {
+      "source_dataset": "Anthropic/hh-rlhf:red-team-attempts",
+      "benchmark_family": "harmful_compliance",
+      "rows": 1
+    },
+    {
+      "source_dataset": "Counsel-Chat",
+      "benchmark_family": "emotional_support",
+      "rows": 40
+    },
+    {
+      "source_dataset": "ESConv",
+      "benchmark_family": "emotional_support",
+      "rows": 31
+    },
+    {
+      "source_dataset": "JailbreakBench/JBB-Behaviors",
+      "benchmark_family": "jailbreak",
+      "rows": 40
+    },
+    {
+      "source_dataset": "lmsys/toxic-chat",
+      "benchmark_family": "jailbreak",
+      "rows": 10
+    },
+    {
+      "source_dataset": "lmsys/toxic-chat",
+      "benchmark_family": "provocation",
+      "rows": 30
+    },
+    {
+      "source_dataset": "synthetic",
+      "benchmark_family": "deception",
+      "rows": 1
+    },
+    {
+      "source_dataset": "synthetic",
+      "benchmark_family": "emotional_support",
+      "rows": 2
+    },
+    {
+      "source_dataset": "synthetic",
+      "benchmark_family": "harmful_compliance",
+      "rows": 1
+    },
+    {
+      "source_dataset": "synthetic",
+      "benchmark_family": "jailbreak",
+      "rows": 1
+    },
+    {
+      "source_dataset": "synthetic",
+      "benchmark_family": "manipulation",
+      "rows": 1
+    },
+    {
+      "source_dataset": "synthetic",
+      "benchmark_family": "persona_drift",
+      "rows": 2
+    },
+    {
+      "source_dataset": "synthetic",
+      "benchmark_family": "provocation",
+      "rows": 2
+    }
+  ]
+}
